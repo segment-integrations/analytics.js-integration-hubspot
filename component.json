@@ -2,12 +2,12 @@
   "name": "analytics.js-integration-hubspot",
   "repo": "segment-integrations/analytics.js-integration-hubspot",
   "description": "The Hubspot analytics.js integration.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "main": "lib/index.js",
   "dependencies": {
     "segmentio/convert-dates": "0.1.0",
-    "segmentio/analytics.js-integration": "0.3.x",
+    "segmentio/analytics.js-integration": "^1.0.0",
     "segmentio/global-queue": "0.0.2"
   },
   "development": {
