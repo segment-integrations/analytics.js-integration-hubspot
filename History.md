@@ -1,4 +1,10 @@
 
+1.0.3 / 2015-06-30
+==================
+
+  * Send `.event` as `.id`, `properties.id` as `_id`
+    * Hubspot expects the `id` property to be the event name; any events with the `.id` property were getting messed up previously
+
 1.0.2 / 2015-06-24
 ==================
 
