@@ -105,12 +105,12 @@ describe('HubSpot', function() {
 
       it('should send an event', function() {
         analytics.track('event');
-        analytics.called(window._hsq.push, ['trackEvent', 'event', {}]);
+        analytics.called(window._hsq.push, ['trackEvent', 'event', { id: 'event' }]);
       });
 
       it('should send an event and properties', function() {
         analytics.track('event', { property: true });
-        analytics.called(window._hsq.push, ['trackEvent', 'event', { property: true }]);
+        analytics.called(window._hsq.push, ['trackEvent', 'event', { property: true, id: 'event' }]);
       });
 
       it('should convert dates to milliseconds', function() {
@@ -118,7 +118,17 @@ describe('HubSpot', function() {
         var ms = date.getTime();
 
         analytics.track('event', { date: date });
-        analytics.called(window._hsq.push, ['trackEvent', 'event', { date: ms }]);
+        analytics.called(window._hsq.push, ['trackEvent', 'event', { date: ms, id: 'event' }]);
+      });
+
+      it('should attach track.event to properties.id', function() {
+        analytics.track('Viewed Product', {});
+        analytics.called(window._hsq.push, ['trackEvent', 'Viewed Product', { id: 'Viewed Product' }]);
+      });
+
+      it('should move properties.id to properties._id', function() {
+        analytics.track('Viewed Product', { id: '12345' });
+        analytics.called(window._hsq.push, ['trackEvent', 'Viewed Product', { id: 'Viewed Product', _id: '12345' }]);
       });
     });
 
