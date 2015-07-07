@@ -130,6 +130,11 @@ describe('HubSpot', function() {
         analytics.track('Viewed Product', { id: '12345' });
         analytics.called(window._hsq.push, ['trackEvent', 'Viewed Product', { id: 'Viewed Product', _id: '12345' }]);
       });
+
+      it('should send revenue as value', function() {
+        analytics.track('Did Something Valuable', { id: '12345', revenue: 13 });
+        analytics.called(window._hsq.push, ['trackEvent', 'Did Something Valuable', { id: 'Did Something Valuable', _id: '12345', value: 13 }]);
+      });
     });
 
     describe('#page', function() {
