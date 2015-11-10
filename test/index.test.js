@@ -96,6 +96,19 @@ describe('HubSpot', function() {
           date: date.getTime()
         }]);
       });
+
+      it('should normalize name fields to firstname and lastname', function() {
+        analytics.identify({
+          email: 'name@example.com',
+          firstName: 'First',
+          lastName: 'Last'
+        });
+        analytics.called(window._hsq.push, ['identify', {
+          email: 'name@example.com',
+          firstname: 'First',
+          lastname: 'Last'
+        }]);
+      });
     });
 
     describe('#track', function() {
