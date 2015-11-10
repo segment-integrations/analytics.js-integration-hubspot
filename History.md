@@ -1,4 +1,9 @@
 
+1.0.6 / 2015-11-10
+==================
+
+  * Add support for semantic name fields to Hubspot
+
 1.0.5 / 2015-07-07
 ==================
 
