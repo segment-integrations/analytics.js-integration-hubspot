@@ -101,12 +101,16 @@ describe('HubSpot', function() {
         analytics.identify({
           email: 'name@example.com',
           firstName: 'First',
-          lastName: 'Last'
+          lastName: 'Last',
+          first_name: 'First',
+          last_name: 'Last',
+          title: 'My Job Title'
         });
         analytics.called(window._hsq.push, ['identify', {
           email: 'name@example.com',
           firstname: 'First',
-          lastname: 'Last'
+          lastname: 'Last',
+          jobtitle: 'My Job Title'
         }]);
       });
     });
