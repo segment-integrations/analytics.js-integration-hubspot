@@ -2,7 +2,7 @@
   "name": "analytics.js-integration-hubspot",
   "repo": "segment-integrations/analytics.js-integration-hubspot",
   "description": "The Hubspot analytics.js integration.",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "license": "MIT",
   "main": "lib/index.js",
   "dependencies": {

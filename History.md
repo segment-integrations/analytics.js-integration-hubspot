@@ -1,4 +1,10 @@
 
+1.0.7 / 2015-11-13
+==================
+
+  * Merge pull request #4 from segment-integrations/traits-lowercase
+  * map firstname, lastname, and jobtitle.
+
 1.0.6 / 2015-11-10
 ==================
 
