@@ -1,4 +1,10 @@
 
+1.0.8 / 2015-11-14
+==================
+
+  * Merge pull request #5 from segment-integrations/revert-4-traits-lowercase
+  * Revert "map firstname, lastname, and jobtitle."
+
 1.0.7 / 2015-11-13
 ==================
 
