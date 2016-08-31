@@ -110,6 +110,28 @@ describe('HubSpot', function() {
           lastname: 'Last'
         }]);
       });
+
+      it('should lowercase any uppercase traits', function() {
+        analytics.identify({
+          email: 'name@example.com',
+          yOlO: 'yolo'
+        });
+        analytics.called(window._hsq.push, ['identify', {
+          email: 'name@example.com',
+          yolo: 'yolo'
+        }]);
+      });
+
+      it('should replace spaces with _', function() {
+        analytics.identify({
+          email: 'name@example.com',
+          'gogurts are life': 'yolo'
+        });
+        analytics.called(window._hsq.push, ['identify', {
+          email: 'name@example.com',
+          gogurts_are_life: 'yolo'
+        }]);
+      });
     });
 
     describe('#track', function() {
