@@ -1,4 +1,9 @@
 
+2.1.0 / 2017-03-16
+==================
+
+  * Bump analytics.js-integration and analytics.js-integration-tester to ^3.x
+
 2.0.1 / 2016-08-31
 ==================
 
