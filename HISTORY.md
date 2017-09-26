@@ -1,3 +1,7 @@
+2.1.1 / 2017-09-26
+==================
+
+  * Populate Hubspot-reserved `company` from `traits.company.name`
 
 2.1.0 / 2017-03-16
 ==================

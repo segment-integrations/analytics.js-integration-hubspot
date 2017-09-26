@@ -132,6 +132,19 @@ describe('HubSpot', function() {
           gogurts_are_life: 'yolo'
         }]);
       });
+
+      it('should fill in company name', function() {
+        analytics.identify({
+          email: 'name@example.com',
+          company: {
+            name: 'Example Company'
+          }
+        });
+        analytics.called(window._hsq.push, ['identify', {
+          email: 'name@example.com',
+          company: 'Example Company'
+        }]);
+      });
     });
 
     describe('#track', function() {
