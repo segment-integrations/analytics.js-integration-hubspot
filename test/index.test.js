@@ -101,13 +101,13 @@ describe('HubSpot', function() {
       it('should normalize name fields to firstname and lastname', function() {
         analytics.identify({
           email: 'name@example.com',
-          firstName: 'Rihanna',
-          lastName: 'Fenty'
+          firstName: 'First',
+          lastName: 'Last'
         });
         analytics.called(window._hsq.push, ['identify', {
           email: 'name@example.com',
-          firstname: 'Rihanna',
-          lastname: 'Fenty'
+          firstname: 'First',
+          lastname: 'Last'
         }]);
       });
 
