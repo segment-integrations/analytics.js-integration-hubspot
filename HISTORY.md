@@ -1,3 +1,8 @@
+2.1.2 / 2017-09-28
+==================
+
+  * Bugfix: Upgrade passed-in `identify` to a version with `companyName()`
+
 2.1.1 / 2017-09-26
 ==================
 
