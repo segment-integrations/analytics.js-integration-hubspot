@@ -133,6 +133,17 @@ describe('HubSpot', function() {
         }]);
       });
 
+      it('should replace periods with _', function() {
+        analytics.identify({
+          email: 'name@example.com',
+          'gogurts.are.life': 'yolo'
+        });
+        analytics.called(window._hsq.push, ['identify', {
+          email: 'name@example.com',
+          gogurts_are_life: 'yolo'
+        }]);
+      });
+
       it('should fill in company name', function() {
         analytics.identify({
           email: 'name@example.com',
