@@ -122,14 +122,14 @@ describe('HubSpot', function() {
         }]);
       });
 
-      it('should replace spaces with _', function() {
+      it('should replace all spaces (tab, new lines, ect) with _', function() {
         analytics.identify({
           email: 'name@example.com',
-          'gogurts are life': 'yolo'
+          'gogurts are\tlife\rand\vgood\ntoday\fhorray': 'yolo'
         });
         analytics.called(window._hsq.push, ['identify', {
           email: 'name@example.com',
-          gogurts_are_life: 'yolo'
+          gogurts_are_life_and_good_today_horray: 'yolo'
         }]);
       });
 
