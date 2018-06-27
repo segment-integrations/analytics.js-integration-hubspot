@@ -144,17 +144,6 @@ describe('HubSpot', function() {
         }]);
       });
 
-      it('should replace a mix of periods and spaces with _s', function() {
-        analytics.identify({
-          email: 'name@example.com',
-          'gogurts.are .. life': 'yolo'
-        });
-        analytics.called(window._hsq.push, ['identify', {
-          email: 'name@example.com',
-          gogurts_are____life: 'yolo'
-        }]);
-      });
-
       it('should fill in company name', function() {
         analytics.identify({
           email: 'name@example.com',
