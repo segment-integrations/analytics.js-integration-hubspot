@@ -1,3 +1,7 @@
+2.1.3 / 2018-07-06
+==================
+  * Add support for tabs, carriage returns, new lines, vertical tabs, form feeds
+
 2.1.2 / 2017-09-28
 ==================
 
